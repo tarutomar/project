@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Speech to Image Generator</title>
+</head>
+<body>
+
+    <h1>🎤➡️🎨 Speech to Image Generator</h1>
+
+    <form method="POST">
+        <button type="submit">Start Speaking</button>
+    </form>
+
+    <hr>
+
+    {% if text %}
+        <h3>📝 Recognized Text:</h3>
+        <p>{{ text }}</p>
+    {% endif %}
+
+    {% if image_url %}
+        <h3>🎨 Generated Image:</h3>
+        <img src="{{ image_url }}" width="400">
+    {% endif %}
+
+</body>
+</html>

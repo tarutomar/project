@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis</title>
+</head>
+<body>
+
+    <h1>🧠 Sentiment Analysis Tool</h1>
+
+    <!-- Input Form -->
+    <form method="POST">
+        <textarea name="text" rows="6" cols="50" placeholder="Enter your text here..." required></textarea>
+        <br><br>
+        <button type="submit">Analyze</button>
+    </form>
+
+    <hr>
+
+    <!-- Result Section -->
+    {% if sentiment %}
+        <h2>📊 Result</h2>
+
+        <p><b>Text:</b> {{ text }}</p>
+        <p><b>Sentiment:</b> {{ sentiment }}</p>
+        <p><b>Polarity:</b> {{ polarity }}</p>
+        <p><b>Subjectivity:</b> {{ subjectivity }}</p>
+    {% endif %}
+
+</body>
+</html>
